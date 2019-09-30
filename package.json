@@ -1,6 +1,6 @@
 {
   "name": "tru-autocomplete",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Okonkwo Henry",
   "description": "Enables users quickly search or filter through a pre-populated list as a user type. It provides suggestion in a dropdown while typing into the field",
   "scripts": {
