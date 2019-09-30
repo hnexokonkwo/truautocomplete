@@ -1,0 +1,11 @@
+<span class="autocomplete" clickOutside (clickOutside)="isFiltering = false">
+    <label for=""><ng-content></ng-content></label>
+    <input [(ngModel)]="value" (blur)="onBlur()" class="{{inputClass}}" (keypress)="filter($event)">
+    <div class="result {{dropdownClass}}" *ngIf="isFiltering">
+        <ul>
+            <li *ngFor="let item of results" (click)="mapToModel(item)">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</span>

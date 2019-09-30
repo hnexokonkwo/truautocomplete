@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tru-autocomplete';
+  text;
+
+  arrayList = ['mobolarinwa', 'Henry', 'Kelechi', "Okonkwo", 'Morgan', 'Seamfix', 'Mobile'];
+
 }
