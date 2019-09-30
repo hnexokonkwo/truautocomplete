@@ -1,27 +1,67 @@
 # TruAutocomplete
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Enables users quickly search or filter through a pre-populated list as a user type. It provides suggestion in a dropdown while typing into the field.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install through NPM:
+```
+npm install tru-autocomplete --save
+```
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Import AutocompleteModule
 
-## Build
+```
+...
+import { TruAutocompleteModule } from './module/autocomplete/autocomplete.module';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    ...
+    TruAutocompleteModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running unit tests
+In your compenent.html
+```
+<tru-autocomplete 
+[filterFrom]="arrayList" 
+[(ngModel)]="text">
+    Label Name
+</tru-autocomplete>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your component.ts
 
-## Running end-to-end tests
+```
+...
+export class AppComponent {
+  text: any;
+  arrayList = ['mobolarinwa', 'Henry', 'Kelechi', "Okonkwo", 'Morgan', 'Truparse', 'Mobile'];
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Adding your own css using `inputClass` for the input field and `dropdownClass` for dropdown
 
-## Further help
+```
+<tru-autocomplete 
+[filterFrom]="arrayList" 
+inputClass= "form-control" 
+dropdownClass = "dropdown-class"
+[(ngModel)]="text">
+    Label Name
+</tru-autocomplete>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Developers
+
+Know more about [Truparse](https://truparse.com).
