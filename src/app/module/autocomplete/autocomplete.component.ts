@@ -22,6 +22,7 @@ export class AutocompleteComponent implements ControlValueAccessor  {
   @Input() filterFrom; // Json to filter from
   @Input() inputClass; // for input class
   @Input() dropdownClass; // for dropdown class 
+  @Input() placeholder; // for dropdown class 
   results: any; // Result after filtering JSON
   isFiltering: boolean; // To show or hide dropdown
 

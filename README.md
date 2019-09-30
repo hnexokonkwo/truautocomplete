@@ -34,6 +34,7 @@ export class AppModule { }
 In your compenent.html
 ```
 <tru-autocomplete 
+placeholder = "Search"
 [filterFrom]="arrayList" 
 [(ngModel)]="text">
     Label Name
@@ -54,6 +55,7 @@ Adding your own css using `inputClass` for the input field and `dropdownClass` f
 
 ```
 <tru-autocomplete 
+placeholder="search"
 [filterFrom]="arrayList" 
 inputClass= "form-control" 
 dropdownClass = "dropdown-class"
