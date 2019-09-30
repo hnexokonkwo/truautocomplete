@@ -15,7 +15,7 @@ Import AutocompleteModule
 
 ```
 ...
-import { TruAutocompleteModule } from './module/autocomplete/autocomplete.module';
+import { TruAutocompleteModule } from 'tru-autocomplete';
 
 @NgModule({
   declarations: [
