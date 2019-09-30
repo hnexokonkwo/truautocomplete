@@ -5,6 +5,8 @@
         position: absolute;
         background: white;
         width: 100%;
+        max-width: 500px;
+        min-width: 200px;
         ul{
             border: 1px solid #efefef;
             padding: 0;
